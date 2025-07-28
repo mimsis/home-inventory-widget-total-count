@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Inventory Widget</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .widget {
+      width: 280px;
+      padding: 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      box-sizing: border-box;
+      margin: 20px auto;
+    }
+
+    .widget h2 {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .count {
+      font-size: 42px;
+      color: #2a9d8f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="widget">
+    <h2>📦 Total Items</h2>
+    <div class="count" id="itemCount">Loading...</div>
+  </div>
+
+  <script>
+    fetch("https://77767f82-46d1-4edc-9fad-95166268a6e7-00-30lavhemp518e.kirk.replit.dev/total-items")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("itemCount").textContent = data.total;
+      })
+      .catch(err => {
+        console.error("Failed to fetch total items:", err);
+        document.getElementById("itemCount").textContent = "Error";
+      });
+  </script>
+</body>
+</html>
