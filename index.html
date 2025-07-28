@@ -3,49 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Inventory Widget</title>
+  <title>Total Items Widget</title>
   <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    font-family: 'Inter', sans-serif;
-  }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      min-height: 100%;
+    }
 
-  .widget {
-    display: inline-block;
-    min-width: 200px;
-    max-width: 250px;
-    padding: 16px 20px;
-    background: white;
-    border-radius: 14px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
+    .widget {
+      display: inline-block;
+      min-width: 160px;
+      max-width: 220px;
+      padding: 16px 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
 
-  .widget h2 {
-    font-size: 16px;
-    color: #444;
-    margin: 0 0 8px;
-  }
+    .widget h2 {
+      font-size: 16px;
+      color: #444;
+      margin: 0 0 8px;
+      font-weight: 600;
+    }
 
-  .count {
-    font-size: 36px;
-    color: #2a9d8f;
-    font-weight: bold;
-  }
-
-.widget:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  transform: translateY(-1px);
-  transition: all 0.2s ease;
-}
-
-    
-</style>
-
+    .count {
+      font-size: 32px;
+      color: #2a9d8f;
+      font-weight: bold;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
   <div class="widget">
