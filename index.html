@@ -5,36 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home Inventory Widget</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: transparent;
-      font-family: 'Inter', sans-serif;
-    }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+  }
 
-    .widget {
-      width: 280px;
-      padding: 20px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      box-sizing: border-box;
-      margin: 20px auto;
-    }
+  .widget {
+    display: inline-block;
+    min-width: 200px;
+    max-width: 250px;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
 
-    .widget h2 {
-      font-size: 18px;
-      color: #444;
-      margin-bottom: 10px;
-    }
+  .widget h2 {
+    font-size: 16px;
+    color: #444;
+    margin: 0 0 8px;
+  }
 
-    .count {
-      font-size: 42px;
-      color: #2a9d8f;
-      font-weight: bold;
-    }
-  </style>
+  .count {
+    font-size: 36px;
+    color: #2a9d8f;
+    font-weight: bold;
+  }
+
+.widget:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+    
+</style>
+
 </head>
 <body>
   <div class="widget">
